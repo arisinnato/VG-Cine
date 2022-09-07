@@ -1,0 +1,380 @@
+body{
+    background-color: #000814 !important;
+}
+.icon{
+    height: 4rem;
+}
+.nav-item{
+    display: flex;
+    color: #ffffff;
+}
+
+.navbar-toggler{
+    border-color: #ffffff;
+    background-color: aliceblue;
+}
+
+.in-re{
+    margin-right: 2rem;
+    display: flex;
+}
+
+.collapse{
+    margin-left: 2rem;
+}
+
+.nav-link{
+    color: #ffffff !important;
+}
+
+
+.img-banner{
+    height: 80vh;
+    object-fit: cover;
+}
+
+.h2-categorias{
+    color: #ffffff;
+    font-size: 2rem;
+   text-align: center;
+}
+
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+.img{
+    margin: 2rem;
+    width: 320px;
+    padding: 0.2rem 0.2rem;
+}
+
+.under-description{
+    color: #ffffff;
+    font-size: 1rem;
+    margin: 3.8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 0.4rem;
+    max-width: 1600px;
+    /* display: flex-direction: column ; <<<movil 
+    flex-direction: column <<< escritorio*/
+}
+
+.ig{
+    margin-left: 3.8rem;
+    width: 45px;
+}
+
+.fb{
+    width: 45px;
+    padding-left: 0.6rem;
+}
+
+.tw{
+    width: 45px;
+    padding-left: 0.6rem;
+}
+
+.yt{
+    width: 45px;
+    padding-left: 0.6rem;
+}
+
+/* about login */
+
+.login-title{
+    font-size: 1.7rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn-login{
+    border: none;
+    border-radius: 5px;
+    color: #0c0f0a;
+    padding: 15px 32px;
+    text-align: center;
+    /* text-decoration: none;
+    display: inline-block; */
+    font-size: 16px;
+    width: 100%;
+    /* padding-bottom: 2rem; */
+    
+}
+
+.login{
+    
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.479);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 0.8rem 0.8rem;
+}
+
+.login-box{
+    padding-top: 6rem;
+}
+
+/* inputs del registro y login */
+
+.input{
+    width: 90%;
+}
+
+/* about register */
+
+.register-title{
+    font-size: 1.7rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.register{
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.479);
+    border-radius: 5%;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 1.2rem 0.8rem;
+}
+
+.btn-registro{
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.container{
+    padding: 7rem;
+}
+
+/* about profile */
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.gray-bg {
+    background-color: #f5f5f5;
+}
+img {
+    max-width: 100%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+/* About Me 
+---------------------*/
+.about-text h3 {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+@media (max-width: 767px) {
+  .about-text h3 {
+    font-size: 35px;
+  }
+}
+.about-text h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .about-text h6 {
+    font-size: 18px;
+  }
+}
+.about-text p {
+  font-size: 18px;
+  max-width: 450px;
+}
+.about-text p mark {
+  font-weight: 600;
+  color: #20247b;
+}
+
+.about-list {
+  padding-top: 10px;
+}
+.about-list .media {
+  padding: 5px 0;
+}
+.about-list label {
+  color: #20247b;
+  font-weight: 600;
+  width: 88px;
+  margin: 0;
+  position: relative;
+}
+.about-list label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 11px;
+  width: 1px;
+  height: 12px;
+  background: #20247b;
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  margin: auto;
+  opacity: 0.5;
+}
+.about-list p {
+  margin: 0;
+  font-size: 15px;
+}
+
+@media (max-width: 991px) {
+  .about-avatar {
+    margin-top: 30px;
+  }
+}
+
+.about-section .counter {
+  padding: 22px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+}
+.about-section .counter .count-data {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.about-section .counter .count {
+  font-weight: 700;
+  color: #20247b;
+  margin: 0 0 5px;
+}
+.about-section .counter p {
+  font-weight: 600;
+  margin: 0;
+}
+mark {
+    background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+    background-color: transparent;
+    padding: 0;
+    color: currentColor;
+}
+.theme-color {
+    color: #fc5356;
+}
+.dark-color {
+    color: #20247b;
+}
+
+/* about modificar */
+
+.modificar{
+  text-align: center;
+  background-color: rgba(240, 248, 255, 0.479);
+  border-radius: 5%;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 1.2rem 0.8rem;
+}
+
+/* about password */
+
+.change-password{
+  text-align: center;
+  background-color: rgba(240, 248, 255, 0.479);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 0.8rem 0.8rem;
+}
+
+.change-container{
+  padding-top: 7rem;
+}
+
+.btn-change{
+  border: none;
+  border-radius: 5px;
+  color: #0c0f0a;
+  padding: 15px 32px;
+  text-align: center;
+  /* text-decoration: none;
+  display: inline-block; */
+  font-size: 16px;
+  width: 100%;
+}
+
+
+/* about information movies */
+
+h3{
+  color: #f5f5f5;
+}
+
+.portada{
+  margin-top: -300px;
+  padding: 0px 5rem;
+  /* display: flex; */
+  color: #f5f5f5;
+}
+.portada img{
+  height: 500px;
+  width: 300px;
+}
+
+.info-container{
+  color: #f5f5f5;
+}
+
+.title-container{
+  font-size: 40px;
+}
+
+.other-info{
+  padding: 0 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* about promociones */
+
+.promo-container{
+  padding-left: 2rem;
+  padding-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-box h2 {
+  padding: 0.3rem 1rem;
+}
+
+.promos{
+  background-color: #8ecae685;
+  width: 15rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
