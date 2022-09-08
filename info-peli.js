@@ -1,3 +1,5 @@
+let movieTitle = ""
+
 const init = async() =>{
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
@@ -30,6 +32,7 @@ const init = async() =>{
     </p>
     `
     containerInfo.innerHTML = data.data.overview
+    movieTitle = data.data.title
 }
 init()
 
@@ -42,47 +45,51 @@ btn.addEventListener("click", async () => {
     const { value: formValues } = await Swal.fire({
         title: 'Multiple inputs',
         html: `
-            <label for="exampleFormControlInput1" class="form-label">Cantidad de entradas</label>
-            <input id="ticketNumber" type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
-
-            <label for="exampleFormControlInput2" class="form-label">Método de pago</label> <br><br>
-            <select name="payment-method" id="payment-method">
-                <option value="transferencia">Transferencia</option>
-                <option value="efectivo">Efectivo</option>
-                <option value="paypal">PayPal</option>
-                <option value="zelle">Zelle</option>
-            </select>
-            <br>
-            <br>
-
-            <label for="exampleFormControlInput3" class="form-label">Cédula</label>
-            <input id="ticketCedula" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Cédula">
-
-            <label for="exampleFormControlInput4" class="form-label">Número de referencia</label>
-            <input id="ticketNumRefer" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Número de referencia">
+        <label for="exampleFormControlInput1" class="form-label">Cantidad de entradas</label>
+        <input id="ticketNumber" type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+        <label for="exampleFormControlInput2" class="form-label">Método de pago</label> <br><br>
+        <select name="payment-method" id="payment-method">
+            <option value="transferencia">Transferencia</option>
+            <option value="efectivo">Efectivo</option>
+            <option value="paypal">PayPal</option>
+            <option value="zelle">Zelle</option>
+        </select>
+        <br>
+        <br>
+        <label for="exampleFormControlInput3" class="form-label">Cédula</label>
+        <input id="ticketCedula" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Cédula">
+        <label for="exampleFormControlInput4" class="form-label">Número de referencia</label>
+        <input id="ticketNumRefer" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Número de referencia">
 
         `,
 
         focusConfirm: false,
         preConfirm: () => {
             return {
-                ticketNumber: document.getElementById("ticketNumber").value,
-                ticketPayment: document.getElementById("payment-method").value,
-                ticketCedula: document.getElementById("ticketCedula").value,
-                ticketNumRefer: document.getElementById("ticketNumRefer").value
+                ticketCount: document.getElementById("ticketNumber").value,
+                paymentMethod: document.getElementById("payment-method").value,
+                id: document.getElementById("ticketCedula").value,
+                referenceNumber: document.getElementById("ticketNumRefer").value,
+                movieTitle: movieTitle
             }
-        //   return [
-        //     document.getElementById('exampleFormControlInput1').value,
-        //     document.getElementById('exampleFormControlInput2').value,
-        //     document.getElementById('exampleFormControlInput3').value,
-        //     document.getElementById('exampleFormControlInput4').value
-        //   ]
+
         }
       })
       
       if (formValues) {
         Swal.fire(JSON.stringify(formValues))
-      }
+
+        const token = localStorage.getItem("token")
+        const response = await fetch("https://vg-cine-server.herokuapp.com/ticket", {
+        method: "POST",
+        headers: { 
+            "Content-Type": "application/json", 
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(formValues)
+        })
+        
+    }
 
 
 })
